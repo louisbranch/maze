@@ -49,8 +49,9 @@ int main(int argc, char *argv[]) {
         ALLEGRO_COLOR bg = al_map_rgba_f(1.0f,1.0f,1.0f,0);
         al_draw_filled_rectangle(x, y, x+30, y+30, bg);
         al_flip_display();
-        x++;
-        y++;
+
+        x = x >= screen_width ? 0 : x + 1;
+        y = y >= screen_height ? 0 : y + 1;
       }
     }
 
